@@ -75,7 +75,6 @@ Author Information
 This Role is created by Daksh Jain.
 For any queries, suggestions, corrections please contact here:
 
-[![Daksh Jain LinkedIn](https://github.com/Dakshjain1/photo/raw/master/linkedin.png)](https://www.linkedin.com/in/dakshjain09/)  
-[![Daksh Jain Medium](https://github.com/Dakshjain1/photo/raw/master/medium.png)](https://daksh-jain00.medium.com/)
+[![Daksh Jain LinkedIn](https://github.com/Dakshjain1/photo/raw/master/linkedin.png)](https://www.linkedin.com/in/dakshjain09/)  [![Daksh Jain Medium](https://github.com/Dakshjain1/photo/raw/master/medium.png)](https://daksh-jain00.medium.com/)
 
 I am always open to learn from the best minds !! :)
