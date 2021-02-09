@@ -36,7 +36,7 @@ Example Playbook
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-`
+```
 - hosts: master
   gather_facts: no
   tasks:
@@ -62,7 +62,7 @@ Including an example of how to use your role (for instance, with variables passe
             include_role:
                   name: Dakshjain1.Ansible-Galaxy_K8SMultiNodeCluster_Role
 
-`
+```
 
 License
 -------
@@ -74,6 +74,8 @@ Author Information
 
 This Role is created by Daksh Jain.
 For any queries, suggestions, corrections please contact here:
-[![Daksh Jain](https://lh3.googleusercontent.com/ogw/ADGmqu8PInpyJmic7HJMbhfgkS-Wi-VIv_bl8X3pUOxO5A=s192-c-mo)](https://www.linkedin.com/in/dakshjain09/)
+
+[![Daksh Jain LinkedIn](https://github.com/Dakshjain1/photo/raw/master/linkedin.png)](https://www.linkedin.com/in/dakshjain09/)  
+[![Daksh Jain Medium](https://github.com/Dakshjain1/photo/raw/master/medium.png)](https://daksh-jain00.medium.com/)
 
 I am always open to learn from the best minds !! :)
