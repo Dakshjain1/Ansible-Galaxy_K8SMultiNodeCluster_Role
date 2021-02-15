@@ -1,7 +1,8 @@
 Kubernetes Multi Node Cluster 
 =========
 
-A role to create a Kubernetes Multi Node Cluster - with 1 Master node & mutiple Worker nodes (by default 2, but scalable). The role can be used to setup the cluster on AWS Cloud.
+A role to create a Kubernetes Multi Node Cluster - with 1 Master node & mutiple Worker nodes (by default 2, but scalable).
+The role can be used to setup the cluster on AWS Cloud.
 
 Requirements
 ------------
@@ -18,7 +19,7 @@ Meaning that 1 IP (of master) should have hostgroup name explicitly setup as "ma
 
 * If you want to even create the EC2 instances using ansible playbook automatically then you can use this playbook that I have created -
 [AWS EC2 Instance Playbook](https://github.com/Dakshjain1/DevOps_Project_Files/tree/main/playbook_k8sMultiNodeCluster)
-Go through the [README.md](https://github.com/Dakshjain1/DevOps_Project_Files/blob/main/README.md) of this repository for the requirements to run the `ec2.yml` file.
+Go through the [README.md](https://github.com/Dakshjain1/DevOps_Project_Files/blob/main/README.md) of this repo for the requirements to run `ec2.yml` file.
 You will need to specify your AWS Access Key & AWS Secret Key.
 
 Role Variables
@@ -75,6 +76,7 @@ Author Information
 This Role is created by Daksh Jain.
 For any queries, suggestions, corrections please contact here:
 
-[![Daksh Jain LinkedIn](https://github.com/Dakshjain1/photo/raw/master/linkedin.png)](https://www.linkedin.com/in/dakshjain09/)  [![Daksh Jain Medium](https://github.com/Dakshjain1/photo/raw/master/medium.png)](https://daksh-jain00.medium.com/)
+[![Daksh Jain LinkedIn](https://github.com/Dakshjain1/photo/raw/master/linkedin.png)](https://www.linkedin.com/in/dakshjain09/)
+[![Daksh Jain Medium](https://github.com/Dakshjain1/photo/raw/master/medium.png)](https://daksh-jain00.medium.com/)
 
 I am always open to learn from the best minds !! :)
