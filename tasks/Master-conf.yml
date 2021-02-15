@@ -5,6 +5,7 @@
 
 - name: kubeadm init
   shell: set -o pipefail && kubeadm init --config=/etc/kubernetes/aws.yml  | tail -2 > output.txt
+  changed_when: False
 
 - name: read the output.txt file
   command: cat output.txt
