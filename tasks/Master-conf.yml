@@ -4,7 +4,7 @@
           dest: /etc/kubernetes/aws.yml
 
 - name: kubeadm init
-  shell: kubeadm init --config=/etc/kubernetes/aws.yml  | tail -2 > output.txt
+  shell: set -o pipefail && kubeadm init --config=/etc/kubernetes/aws.yml  | tail -2 > output.txt
 
 - name: read the output.txt file
   command: cat output.txt
