@@ -2,14 +2,20 @@
   template:
           src: aws.yml
           dest: /etc/kubernetes/aws.yml
+
 - name: kubeadm init
-  shell: |
-          kubeadm init --config=/etc/kubernetes/aws.yml  | tail -2 > output.txt
-          cat output.txt
+  shell:
+          cmd: kubeadm init --config=/etc/kubernetes/aws.yml  | tail -2 > output.txt
+
+- name: read the output.txt file
+  shell:
+          cmd: cat output.txt
   register: token
+
 - name: test print token
   debug:
           msg: "{{ token }}"
+
 - name: token
   debug:
           msg: "{{ token.stdout | regex_replace('[\\\\]\n') }}"
@@ -20,11 +26,28 @@
           name: "dummy"
           command: "{{ token_final }}"
 
-- name: kubeadm init
-  shell: |
-          mkdir -p $HOME/.kube
-          cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-          chown $(id -u):$(id -g) $HOME/.kube/config
+- name: create .kube folder
+  file:
+          path: $HOME/.kube
+          state: directory
+
+- name: copy important files to .kube/config folder
+  copy:
+          remote_src: yes
+          src: /etc/kubernetes/admin.conf
+          dest: $HOME/.kube/config
+
+- name: change owner of .kube/config
+  file:
+          path: $HOME/.kube/config 
+          owner: "{{ ansible_effective_user_id }}"
+          group: "{{ ansible_effective_group_id }}"
+
+          #- name: kubeadm init
+          #  shell: |
+          #mkdir -p $HOME/.kube
+          #cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+          #chown $(id -u):$(id -g) $HOME/.kube/config
 
 - name: flannel install
   shell:
