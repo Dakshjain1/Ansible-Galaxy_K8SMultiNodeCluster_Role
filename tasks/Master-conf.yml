@@ -44,6 +44,7 @@
 
 - name: flannel install
   command: kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+  changed_when: False
 
 - name: copying the config file to RHEL
   fetch:

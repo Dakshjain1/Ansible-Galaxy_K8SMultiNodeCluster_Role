@@ -5,3 +5,4 @@
 
 - name: run the command
   command: "{{ token.msg.msg }}"
+  changed_when: False
