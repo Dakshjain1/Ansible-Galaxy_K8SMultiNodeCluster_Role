@@ -4,5 +4,4 @@
   register: token
 
 - name: run the command
-  shell:
-          cmd: "{{ token.msg.msg }}"
+  shell: "{{ token.msg.msg }}"
