@@ -41,14 +41,8 @@
           owner: "{{ ansible_effective_user_id }}"
           group: "{{ ansible_effective_group_id }}"
 
-          #- name: kubeadm init
-          #  shell: |
-          #mkdir -p $HOME/.kube
-          #cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-          #chown $(id -u):$(id -g) $HOME/.kube/config
-
 - name: flannel install
-  shell: kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+  command: kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 
 - name: copying the config file to RHEL
   fetch:
